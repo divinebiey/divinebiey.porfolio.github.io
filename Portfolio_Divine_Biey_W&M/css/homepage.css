@@ -1,0 +1,303 @@
+/*General */ 
+html{
+    font-family: "Roboto", sans-serif;
+    background-color: #f0ede7;
+    color: #111;
+}
+body{
+    margin:0;
+}
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 80rem;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    display: inline-block;
+ }
+ 
+ header nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ 
+ header nav a {
+    background-color:  rgb(223, 216, 189);
+    color:#724c39;
+    transition: color 2s ease-in-out;
+ 
+ }
+ header nav a:hover,
+ header nav a:focus-visible{
+    color: #d08787;
+    background-color:#f7f1ea;
+ }
+ header nav a.active{
+    color: #030303;
+    background-color:#f7f1ea;
+ }
+ header button .contact{
+   color:rgb(12, 12, 9);
+   font-size: 1.5rem;
+   text-decoration: none;
+   background: #c07272;
+   border-radius: 0.5rem; 
+ }
+
+ .logo{
+  font-size: 2rem;
+}
+ 
+ /* MAIN */
+.main-container{
+    background: #e2e2dd39 url("");
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: auto;
+    background-size: cover;
+    height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+}
+ 
+.main-container h1{
+            font-weight: 500;
+            line-height: 4.688rem;
+            margin-bottom: 9.375rem;
+            margin-top: -6.25rem;
+            font-size: 3.75rem;
+            position: absolute;
+            left: 5rem;
+            color:#b67a8c;
+}
+.main-container p{
+            font-size: 1.5rem;
+            line-height: 2.625rem;
+            color: rgb(12, 11, 11);
+            width: 26.125rem;
+            margin-top: 0rem;
+            text-align: center;
+            left: 4.375rem;
+            position: relative;
+}
+.main-container button{
+    color:rgb(20, 19, 19);
+    font-size: 1.5rem;
+    text-decoration: none;
+    background: #b2dce9;
+    border-radius: 2em;
+    margin-top: 9.375rem;
+    margin-left:-18.75rem;
+    margin-right: 6.25rem;
+    padding: 0.75rem 3rem;
+    text-align: center;
+}
+.main-container img{
+   display: block;
+   margin-left: 25rem;
+}
+
+/* waves */
+.ocean {
+  height: 5rem; /* change the height of the waves here */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
+}
+
+/* Projects*/
+h2{
+    color: #cd728c;
+    font-size: 2.5rem;
+    width: 70.625rem;
+    margin: 1.875rem auto;
+    margin-left: 6.25rem;
+}
+.column{
+    float: left;
+    width: 25%;
+    padding: 0 0.625rem;
+}
+@media screen and (max-width: 37.5rem) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+  }
+  .card {
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2); 
+    padding: 1rem;
+    text-align: center;
+    background-color: #abc0e1;
+  }
+  .row{margin: 0 -0.313;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card:hover {
+    box-shadow: 0rem 1.875rem 1.125rem -0.5rem rgba(0, 0, 0,0.1);
+      transform: scale(1.10, 1.10);
+  }
+
+/* Contact */
+h6{
+  margin-top: 10rem;
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.625rem 0.625rem;
+  margin-bottom: 0rem;
+}
+.contact p{
+    font-size: 1.25rem;
+    color: #000;
+    text-align: center;
+    position: static;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+.contact{
+    position: static;
+    text-align: center;
+    height: 25rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    background-color: #d3d3d3;
+    color: #0e0d0d;
+    font-size: 1rem; 
+}
+.contact button{
+    margin: 0;
+    position: static;
+    margin-right: 4.375rem;
+    margin-top: 2rem;
+    margin-bottom: 12.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    color:rgb(20, 19, 19);
+    font-size: 1.25rem;
+    text-decoration: none;
+    background: #b2dce9;   
+    border-radius: 2em;   
+}
+
+   /* FOOTER */
+  .social{
+    padding: 1.25rem;
+    font-size: 1.875rem;
+    width: 3.125rem;
+    text-align: center;
+    display: flex;
+    text-decoration: none;
+    margin: 0.313rem 0.125rem;
+  }
+  .social:hover {
+        opacity: 0.7;
+    }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    display:inline-block;
+    vertical-align:top;
+    margin-right: 1em;
+    padding-left: 10%;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    display:inline-block;
+    vertical-align:top;
+    margin-right: 1em;
+    padding-left: 10%;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    display:inline-block;
+    vertical-align:top;
+    margin-right: 1em;
+    padding-left: 10%;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+    display:inline-block;
+    vertical-align:top;
+    margin-right: 1em;
+    padding-left: 10%;
+  }
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1em;
+    padding-left: 10%;
+  }
+
+  footer{
+ background-color: #85888d;
+  color: #1d1c1c;
+  font-size: 1rem; 
+  height: auto;
+}
+
+h3{
+  color: black;
+  font-size: 100;
+  text-align: center;
+  padding: 0.625rem 0.625rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  }
+
